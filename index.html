@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vectora Networks | Ingeniería de Redes y Seguridad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'vx-bg': '#0A0F1E',
-                        'vx-panel': '#12192B',
-                        'vx-text': '#E7ECF3',
-                        'vx-muted': '#94A3B8',
-                        'vx-cyan': '#38BDF8',
-                        'vx-amber': '#F5A524',
+                        'vx-bg': '#FFFFFF',
+                        'vx-bg-alt': '#F4F6F9',
+                        'vx-text': '#131B2B',
+                        'vx-muted': '#5B6472',
+                        'vx-primary': '#145DA0',
+                        'vx-accent': '#1FA97A',
+                        'vx-footer': '#0D1B2A',
                     },
                     fontFamily: {
-                        display: ['"Space Grotesk"', 'sans-serif'],
-                        body: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
@@ -29,52 +29,62 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-vx-bg text-vx-text font-body">
+<body class="bg-vx-bg text-vx-text font-sans">
+
     <!-- MENU -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-vx-bg/90 backdrop-blur">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <span class="text-white font-bold text-lg">Vectora Networks</span>
+            <span class="font-bold text-lg text-vx-text">Vectora Networks</span>
 
-            <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-white text-2xl">☰</button>
+            <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-vx-text text-2xl">☰</button>
 
-            <div id="menu-links" class="hidden md:flex gap-6 text-vx-muted">
-                <a href="#servicios" class="hover:text-white">Servicios</a>
-                <a href="#nosotros" class="hover:text-white">Nosotros</a>
-                <a href="#contacto" class="hover:text-white">Contacto</a>
-                <a href="https://wa.me/59164427367" target="_blank" class="hover:text-white">WhatsApp</a>
+            <div id="menu-links" class="hidden md:flex items-center gap-8 text-vx-muted">
+                <a href="#servicios" class="hover:text-vx-text">Servicios</a>
+                <a href="#nosotros" class="hover:text-vx-text">Nosotros</a>
+                <a href="#contacto" class="hover:text-vx-text">Contacto</a>
+                <a href="https://wa.me/59164427367" target="_blank"
+                    class="bg-vx-primary hover:bg-vx-primary/90 text-white px-5 py-2 rounded-full font-medium transition">
+                    Contáctanos
+                </a>
             </div>
         </div>
-        <div id="menu-mobile" class="hidden md:hidden flex-col bg-vx-bg px-4 pb-4 gap-3 text-vx-muted">
-            <a href="#servicios" class="block py-2 border-b border-white/10">Servicios</a>
-            <a href="#nosotros" class="block py-2 border-b border-white/10">Nosotros</a>
+        <div id="menu-mobile" class="hidden md:hidden flex-col bg-white px-4 pb-4 gap-3 text-vx-muted border-t border-gray-100">
+            <a href="#servicios" class="block py-2 border-b border-gray-100">Servicios</a>
+            <a href="#nosotros" class="block py-2 border-b border-gray-100">Nosotros</a>
             <a href="#contacto" class="block py-2">Contacto</a>
         </div>
     </nav>
 
-    <!-- HERO con video de fondo (placeholder de Google, cambiar cuando el cliente pase el suyo) -->
-    <section class="relative h-screen w-full overflow-hidden pt-16">
+    <!-- HERO -->
+    <section class="relative h-[80vh] min-h-[520px] w-full overflow-hidden">
         <video autoplay muted loop playsinline
             class="absolute top-0 left-0 w-full h-full object-cover">
             <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
         </video>
-        <div class="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 via-black/40 to-black/10"></div>
 
-        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-            <h1 class="text-white text-3xl md:text-5xl font-bold max-w-3xl">
-                Ingeniería e infraestructura para conectividad y seguridad de tu empresa
+        <div class="relative z-10 h-full flex flex-col justify-center px-6 md:px-16 max-w-2xl">
+            <p class="text-vx-accent font-medium mb-3">Ingeniería de Redes y Seguridad Electrónica</p>
+            <h1 class="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">
+                Conectividad y seguridad de nivel profesional para tu empresa
             </h1>
-            <a href="https://wa.me/59164427367" target="_blank"
-                class="mt-8 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition">
-                Comunícate con nosotros
-            </a>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://wa.me/59164427367" target="_blank"
+                    class="bg-vx-primary hover:bg-vx-primary/90 text-white font-medium px-6 py-3 rounded-full transition">
+                    Comunícate con nosotros
+                </a>
+                <a href="#servicios"
+                    class="border border-white/70 text-white font-medium px-6 py-3 rounded-full hover:bg-white/10 transition">
+                    Ver servicios
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- SERVICIOS -->
     <!-- BANNER -->
-    <section class="bg-vx-panel py-16 px-4">
-        <div class="max-w-4xl mx-auto border-l-4 border-vx-amber pl-6 md:pl-10">
-            <p class="font-display text-2xl md:text-3xl font-medium leading-snug text-vx-text">
+    <section class="bg-vx-bg-alt py-16 px-4">
+        <div class="max-w-4xl mx-auto border-l-4 border-vx-primary pl-6 md:pl-10">
+            <p class="text-2xl md:text-3xl font-semibold leading-snug text-vx-text">
                 Construye tu espacio con visión de futuro.
             </p>
             <p class="text-vx-muted text-lg mt-4 leading-relaxed max-w-2xl">
@@ -85,60 +95,83 @@
         </div>
     </section>
 
-    <section id="servicios" class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-        <a href="pages/redes-datos.html" class="group block rounded-2xl overflow-hidden bg-vx-panel border border-white/5 hover:border-vx-cyan/40 transition">
-            <div class="h-56 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
-                    alt="Infraestructura de Datos y Redes"
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-            </div>
-            <div class="p-6">
-                <h3 class="font-display text-xl font-bold mb-2">Infraestructura de Datos y Redes</h3>
-                <p class="text-vx-muted">Armado de racks, cableado estructurado, puntos de red, routing y switching, access points Wi-Fi Pro.</p>
-            </div>
-        </a>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 px-4 max-w-6xl mx-auto space-y-20">
 
-        <a href="pages/seguridad-electronica.html" class="group block rounded-2xl overflow-hidden bg-vx-panel border border-white/5 hover:border-vx-cyan/40 transition">
-            <div class="h-56 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80"
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+                    alt="Infraestructura de Datos y Redes"
+                    class="rounded-xl shadow-md w-full h-80 object-cover">
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-vx-primary font-medium mb-2">Soluciones de Datos y Redes</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Infraestructura de Datos y Redes</h2>
+                <p class="text-vx-muted mb-6 leading-relaxed">
+                    Desarrollamos la arquitectura digital que mantiene operativas a las empresas y hogares modernos:
+                    armado de racks, cableado estructurado certificado, puntos de red, routing y switching, y
+                    access points Wi-Fi Pro con cobertura sin zonas muertas.
+                </p>
+                <a href="pages/redes-datos.html"
+                    class="inline-block border border-vx-primary text-vx-primary font-medium px-6 py-3 rounded-full hover:bg-vx-primary hover:text-white transition">
+                    Ver detalle del servicio
+                </a>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80"
                     alt="Sistemas de Seguridad Electrónica"
-                    class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    class="rounded-xl shadow-md w-full h-80 object-cover">
             </div>
-            <div class="p-6">
-                <h3 class="font-display text-xl font-bold mb-2">Sistemas de Seguridad Electrónica</h3>
-                <p class="text-vx-muted">CCTV, NVR/DVR, cámaras de alta tecnología, integración de seguridad y supervisión remota.</p>
+            <div class="md:w-1/2">
+                <p class="text-vx-accent font-medium mb-2">Sistemas de Seguridad Electrónica</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Monitoreo y Control Inteligente</h2>
+                <p class="text-vx-muted mb-6 leading-relaxed">
+                    Protegemos tus activos más valiosos: sistemas CCTV, NVR y DVR, cámaras de alta tecnología con
+                    visión nocturna y analítica avanzada, e integración de seguridad centralizada para supervisión
+                    remota en tiempo real.
+                </p>
+                <a href="pages/seguridad-electronica.html"
+                    class="inline-block border border-vx-accent text-vx-accent font-medium px-6 py-3 rounded-full hover:bg-vx-accent hover:text-white transition">
+                    Ver detalle del servicio
+                </a>
             </div>
-        </a>
+        </div>
+
     </section>
 
     <!-- QUIENES SOMOS -->
-    <section id="nosotros" class="py-16 px-4 max-w-4xl mx-auto text-center">
-        <h2 class="font-display text-3xl font-bold mb-4">¿Quiénes Somos y Qué Hacemos?</h2>
-        <p class="text-vx-muted leading-relaxed">
-            En nuestra empresa transformamos la manera en que los espacios se conectan y se protegen.
-            Somos especialistas en el diseño e implementación de proyectos de ingeniería en
-            telecomunicaciones y seguridad electrónica, ofreciendo un servicio de principio a fin (end-to-end).
-            Nos encargamos del diseño técnico, la selección del equipamiento adecuado, el despliegue de
-            infraestructura física y la configuración avanzada de cada dispositivo, asegurando que tu espacio
-            cuente con una plataforma sólida, escalable y duradera.
-        </p>
+    <section id="nosotros" class="bg-vx-bg-alt py-20 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">¿Quiénes Somos y Qué Hacemos?</h2>
+            <p class="text-vx-muted leading-relaxed">
+                En nuestra empresa transformamos la manera en que los espacios se conectan y se protegen.
+                Somos especialistas en el diseño e implementación de proyectos de ingeniería en
+                telecomunicaciones y seguridad electrónica, ofreciendo un servicio de principio a fin (end-to-end).
+                Nos encargamos del diseño técnico, la selección del equipamiento adecuado, el despliegue de
+                infraestructura física y la configuración avanzada de cada dispositivo, asegurando que tu espacio
+                cuente con una plataforma sólida, escalable y duradera.
+            </p>
+        </div>
     </section>
 
-    <!-- PESTAÑAS: Por qué elegirnos / A quién beneficia -->
-    <section class="py-16 px-4 max-w-4xl mx-auto" x-data="{ tab: 'porque' }">
-        <div class="flex justify-center gap-4 mb-8">
+    <!-- PESTAÑAS -->
+    <section class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="flex justify-center gap-8 mb-10 border-b border-gray-200">
             <button onclick="showTab('porque')" id="tab-porque"
-                class="tab-btn px-6 py-2 rounded-full font-semibold bg-vx-cyan text-vx-bg">
+                class="tab-btn pb-4 font-medium border-b-2 border-vx-primary text-vx-text">
                 Por qué elegirnos
             </button>
             <button onclick="showTab('beneficio')" id="tab-beneficio"
-                class="tab-btn px-6 py-2 rounded-full font-semibold bg-vx-panel text-vx-muted">
+                class="tab-btn pb-4 font-medium border-b-2 border-transparent text-vx-muted">
                 A quién beneficia
             </button>
         </div>
 
         <div id="content-porque" class="tab-content">
-            <h3 class="font-display text-2xl font-bold mb-4 text-center">¿Por qué elegirnos como tu aliado estratégico?</h3>
+            <h3 class="text-2xl font-bold mb-4 text-center">¿Por qué elegirnos como tu aliado estratégico?</h3>
             <p class="text-vx-muted mb-4">En cada proyecto de infraestructura de datos y seguridad electrónica, la diferencia entre una instalación ordinaria y una solución de ingeniería de alto nivel radica en el compromiso, el conocimiento y el respaldo técnico.</p>
             <ol class="space-y-3 text-vx-text list-decimal list-inside">
                 <li><strong>Ingeniería Presente de Principio a Fin:</strong> nuestro equipo acompaña tu proyecto en cada etapa, supervisa presencialmente la ejecución técnica y garantiza precisión impecable en el campo.</li>
@@ -149,7 +182,7 @@
         </div>
 
         <div id="content-beneficio" class="tab-content hidden">
-            <h3 class="font-display text-2xl font-bold mb-4 text-center">¿Por qué es vital planificar desde el diseño inicial?</h3>
+            <h3 class="text-2xl font-bold mb-4 text-center">¿Por qué es vital planificar desde el diseño inicial?</h3>
             <p class="text-vx-muted mb-4">Hoy en día, una infraestructura de red robusta y un sistema de seguridad eficiente ya no son un lujo; son una necesidad básica e indispensable.</p>
             <p class="text-vx-muted mb-4">Las casas, oficinas y negocios modernos dependen totalmente de internet. Una buena conectividad se traduce directamente en productividad, eficiencia y continuidad operativa.</p>
             <p class="text-vx-muted">La seguridad electrónica representa una responsabilidad directa con la protección de tu patrimonio y la integridad de quienes ocupan tu espacio, generando además un impacto social positivo en la comunidad.</p>
@@ -157,33 +190,35 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-16 px-4 max-w-2xl mx-auto">
-        <h2 class="font-display text-3xl font-bold mb-8 text-center">Solicita Información</h2>
-        <form action="https://formsubmit.co/vectora.ingenieria@gmail.com" method="POST" class="space-y-4">
-            <input type="hidden" name="_subject" value="Nueva solicitud - Vectora Networks">
-            <input type="hidden" name="_captcha" value="false">
+    <section id="contacto" class="bg-vx-bg-alt py-20 px-4">
+        <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">Solicita Información</h2>
+            <form action="https://formsubmit.co/vectora.ingenieria@gmail.com" method="POST" class="space-y-4">
+                <input type="hidden" name="_subject" value="Nueva solicitud - Vectora Networks">
+                <input type="hidden" name="_captcha" value="false">
 
-            <input type="text" name="Nombre" placeholder="Nombre" required
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <input type="text" name="Empresa" placeholder="Empresa"
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <input type="email" name="Correo" placeholder="Correo" required
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <input type="tel" name="Teléfono" placeholder="Teléfono" required
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <select name="Servicio de interés" required
-                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="">Servicio de interés</option>
-                <option value="Infraestructura de Datos y Redes">Infraestructura de Datos y Redes</option>
-                <option value="Sistemas de Seguridad Electrónica">Sistemas de Seguridad Electrónica</option>
-                <option value="Ambos">Ambos</option>
-            </select>
+                <input type="text" name="Nombre" placeholder="Nombre" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                <input type="text" name="Empresa" placeholder="Empresa"
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                <input type="email" name="Correo" placeholder="Correo" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                <input type="tel" name="Teléfono" placeholder="Teléfono" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                <select name="Servicio de interés" required
+                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                    <option value="">Servicio de interés</option>
+                    <option value="Infraestructura de Datos y Redes">Infraestructura de Datos y Redes</option>
+                    <option value="Sistemas de Seguridad Electrónica">Sistemas de Seguridad Electrónica</option>
+                    <option value="Ambos">Ambos</option>
+                </select>
 
-            <button type="submit"
-                class="w-full bg-vx-amber hover:bg-amber-400 text-vx-bg font-semibold py-3 rounded-lg transition">
-                Enviar solicitud
-            </button>
-        </form>
+                <button type="submit"
+                    class="w-full bg-vx-primary hover:bg-vx-primary/90 text-white font-medium py-3 rounded-full transition">
+                    Enviar solicitud
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- WHATSAPP FLOTANTE -->
@@ -193,12 +228,13 @@
     </a>
 
     <!-- FOOTER -->
-    <footer class="bg-vx-panel border-t border-white/5 text-vx-muted py-10 px-4 text-center">
-        <h3 class="font-display text-vx-text text-xl font-bold mb-2">Vectora Networks</h3>
+    <footer class="bg-vx-footer text-gray-300 py-12 px-4 text-center">
+        <h3 class="text-white text-xl font-bold mb-2">Vectora Networks</h3>
         <p>Ingeniería de redes y seguridad electrónica</p>
         <p class="mt-4">📞 64427367 &nbsp;|&nbsp; ✉️ vectora.ingenieria@gmail.com</p>
-        <p class="mt-6 text-sm text-vx-muted/60">&copy; 2026 Vectora Networks. Todos los derechos reservados.</p>
+        <p class="mt-6 text-sm text-gray-500">&copy; 2026 Vectora Networks. Todos los derechos reservados.</p>
     </footer>
+
 <script src="js/script.js"></script>
 </body>
 </html>

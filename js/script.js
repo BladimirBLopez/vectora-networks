@@ -9,7 +9,7 @@ function showTab(tab) {
     document.getElementById('content-beneficio').classList.add('hidden');
     document.getElementById('content-' + tab).classList.remove('hidden');
 
-    document.getElementById('tab-porque').className = 'tab-btn px-6 py-2 rounded-full font-semibold bg-vx-panel text-vx-muted';
-    document.getElementById('tab-beneficio').className = 'tab-btn px-6 py-2 rounded-full font-semibold bg-vx-panel text-vx-muted';
-    document.getElementById('tab-' + tab).className = 'tab-btn px-6 py-2 rounded-full font-semibold bg-vx-cyan text-vx-bg';
+    document.getElementById('tab-porque').className = 'tab-btn pb-4 font-medium border-b-2 border-transparent text-vx-muted';
+    document.getElementById('tab-beneficio').className = 'tab-btn pb-4 font-medium border-b-2 border-transparent text-vx-muted';
+    document.getElementById('tab-' + tab).className = 'tab-btn pb-4 font-medium border-b-2 border-vx-primary text-vx-text';
 }
