@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Contenido va aquí -->
+    <!-- HERO con video de fondo (placeholder de Google, cambiar cuando el cliente pase el suyo) -->
+    <section class="relative h-screen w-full overflow-hidden">
+        <video autoplay muted loop playsinline
+            class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <h1 class="text-white text-3xl md:text-5xl font-bold max-w-3xl">
+                Ingeniería e infraestructura para conectividad y seguridad de tu empresa
+            </h1>
+            <a href="https://wa.me/59164427367" target="_blank"
+                class="mt-8 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full transition">
+                Comunícate con nosotros
+            </a>
+        </div>
+    </section>
 </body>
 </html>
