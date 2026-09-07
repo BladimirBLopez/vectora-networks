@@ -1,4 +1,9 @@
 // Vectora Networks - interacciones
+function toggleMenu() {
+    document.getElementById('menu-mobile').classList.toggle('hidden');
+    document.getElementById('menu-mobile').classList.toggle('flex');
+}
+
 function showTab(tab) {
     document.getElementById('content-porque').classList.add('hidden');
     document.getElementById('content-beneficio').classList.add('hidden');

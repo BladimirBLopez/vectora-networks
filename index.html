@@ -8,8 +8,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- MENU -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/90 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <span class="text-white font-bold text-lg">Vectora Networks</span>
+
+            <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-white text-2xl">☰</button>
+
+            <div id="menu-links" class="hidden md:flex gap-6 text-gray-200">
+                <a href="#servicios" class="hover:text-white">Servicios</a>
+                <a href="#nosotros" class="hover:text-white">Nosotros</a>
+                <a href="#contacto" class="hover:text-white">Contacto</a>
+                <a href="https://wa.me/59164427367" target="_blank" class="hover:text-white">WhatsApp</a>
+            </div>
+        </div>
+        <div id="menu-mobile" class="hidden md:hidden flex-col bg-gray-900 px-4 pb-4 gap-3 text-gray-200">
+            <a href="#servicios" class="block py-2 border-b border-gray-700">Servicios</a>
+            <a href="#nosotros" class="block py-2 border-b border-gray-700">Nosotros</a>
+            <a href="#contacto" class="block py-2">Contacto</a>
+        </div>
+    </nav>
+
     <!-- HERO con video de fondo (placeholder de Google, cambiar cuando el cliente pase el suyo) -->
-    <section class="relative h-screen w-full overflow-hidden">
+    <section class="relative h-screen w-full overflow-hidden pt-16">
         <video autoplay muted loop playsinline
             class="absolute top-0 left-0 w-full h-full object-cover">
             <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
@@ -28,7 +49,7 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    <section id="servicios" class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         <a href="pages/redes-datos.html" class="group block rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition">
             <div class="h-56 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
@@ -55,7 +76,7 @@
     </section>
 
     <!-- QUIENES SOMOS -->
-    <section class="py-16 px-4 max-w-4xl mx-auto text-center">
+    <section id="nosotros" class="py-16 px-4 max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-4">¿Quiénes Somos y Qué Hacemos?</h2>
         <p class="text-gray-600 leading-relaxed">
             En nuestra empresa transformamos la manera en que los espacios se conectan y se protegen.
@@ -100,7 +121,7 @@
     </section>
 
     <!-- CONTACTO -->
-    <section class="py-16 px-4 max-w-2xl mx-auto">
+    <section id="contacto" class="py-16 px-4 max-w-2xl mx-auto">
         <h2 class="text-3xl font-bold mb-8 text-center">Solicita Información</h2>
         <form action="https://formsubmit.co/vectora.ingenieria@gmail.com" method="POST" class="space-y-4">
             <input type="hidden" name="_subject" value="Nueva solicitud - Vectora Networks">
