@@ -53,5 +53,51 @@
             </div>
         </a>
     </section>
+
+    <!-- QUIENES SOMOS -->
+    <section class="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">¿Quiénes Somos y Qué Hacemos?</h2>
+        <p class="text-gray-600 leading-relaxed">
+            En nuestra empresa transformamos la manera en que los espacios se conectan y se protegen.
+            Somos especialistas en el diseño e implementación de proyectos de ingeniería en
+            telecomunicaciones y seguridad electrónica, ofreciendo un servicio de principio a fin (end-to-end).
+            Nos encargamos del diseño técnico, la selección del equipamiento adecuado, el despliegue de
+            infraestructura física y la configuración avanzada de cada dispositivo, asegurando que tu espacio
+            cuente con una plataforma sólida, escalable y duradera.
+        </p>
+    </section>
+
+    <!-- PESTAÑAS: Por qué elegirnos / A quién beneficia -->
+    <section class="py-16 px-4 max-w-4xl mx-auto" x-data="{ tab: 'porque' }">
+        <div class="flex justify-center gap-4 mb-8">
+            <button onclick="showTab('porque')" id="tab-porque"
+                class="tab-btn px-6 py-2 rounded-full font-semibold bg-blue-600 text-white">
+                Por qué elegirnos
+            </button>
+            <button onclick="showTab('beneficio')" id="tab-beneficio"
+                class="tab-btn px-6 py-2 rounded-full font-semibold bg-gray-200 text-gray-700">
+                A quién beneficia
+            </button>
+        </div>
+
+        <div id="content-porque" class="tab-content">
+            <h3 class="text-2xl font-bold mb-4 text-center">¿Por qué elegirnos como tu aliado estratégico?</h3>
+            <p class="text-gray-600 mb-4">En cada proyecto de infraestructura de datos y seguridad electrónica, la diferencia entre una instalación ordinaria y una solución de ingeniería de alto nivel radica en el compromiso, el conocimiento y el respaldo técnico.</p>
+            <ol class="space-y-3 text-gray-700 list-decimal list-inside">
+                <li><strong>Ingeniería Presente de Principio a Fin:</strong> nuestro equipo acompaña tu proyecto en cada etapa, supervisa presencialmente la ejecución técnica y garantiza precisión impecable en el campo.</li>
+                <li><strong>Técnicos Altamente Capacitados:</strong> años de experiencia práctica en racks, cableado estructurado e instalación de sistemas de seguridad.</li>
+                <li><strong>Materiales Garantizados:</strong> componentes y equipos de marcas reconocidas, con garantías oficiales del fabricante.</li>
+                <li><strong>Cero Imprevistos, Máxima Confiabilidad:</strong> el acompañamiento continuo reduce errores y tiempos de ejecución.</li>
+            </ol>
+        </div>
+
+        <div id="content-beneficio" class="tab-content hidden">
+            <h3 class="text-2xl font-bold mb-4 text-center">¿Por qué es vital planificar desde el diseño inicial?</h3>
+            <p class="text-gray-600 mb-4">Hoy en día, una infraestructura de red robusta y un sistema de seguridad eficiente ya no son un lujo; son una necesidad básica e indispensable.</p>
+            <p class="text-gray-600 mb-4">Las casas, oficinas y negocios modernos dependen totalmente de internet. Una buena conectividad se traduce directamente en productividad, eficiencia y continuidad operativa.</p>
+            <p class="text-gray-600">La seguridad electrónica representa una responsabilidad directa con la protección de tu patrimonio y la integridad de quienes ocupan tu espacio, generando además un impacto social positivo en la comunidad.</p>
+        </div>
+    </section>
+<script src="js/script.js"></script>
 </body>
 </html>
