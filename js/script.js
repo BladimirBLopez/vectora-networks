@@ -1,4 +1,9 @@
 // Vectora Networks - interacciones
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 700, once: true, offset: 80 });
+    }
+});
 function toggleMenu() {
     document.getElementById('menu-mobile').classList.toggle('hidden');
     document.getElementById('menu-mobile').classList.toggle('flex');
