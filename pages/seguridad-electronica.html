@@ -12,6 +12,7 @@
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,60 +27,79 @@
                         'vx-accent': '#1FA97A',
                         'vx-footer': '#0D1B2A',
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="bg-vx-bg text-vx-text font-sans">
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 relative">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center"><img src="../assets/img/logo.png" alt="Vectora Networks" class="h-12 object-contain"></a>
             <a href="../index.html" class="text-vx-accent font-medium hover:underline">&larr; Volver al inicio</a>
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto px-6 pt-16 pb-10">
+    <div class="max-w-4xl mx-auto px-6 pt-6 text-sm text-vx-muted">
+        <a href="../index.html" class="hover:text-vx-accent">Inicio</a>
+        <span class="mx-2">/</span>
+        <a href="../index.html#servicios" class="hover:text-vx-accent">Servicios</a>
+        <span class="mx-2">/</span>
+        <span class="text-vx-text">Sistemas de Seguridad Electrónica</span>
+    </div>
+
+    <header class="max-w-4xl mx-auto px-6 pt-8 pb-10">
         <p class="text-vx-accent font-medium">Sistemas de Seguridad Electrónica</p>
         <h1 class="text-3xl md:text-4xl font-bold mt-2 max-w-2xl">
             Monitoreo y control inteligente para proteger tus activos más valiosos
         </h1>
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 pb-20 space-y-8">
-        <div data-aos="fade-up" class="border-l-4 border-vx-accent pl-6 py-1">
-            <h3 class="text-xl font-bold mb-1">Sistemas CCTV, NVR y DVR</h3>
-            <p class="text-vx-muted">Grabación y monitoreo continuo de alta definición.</p>
-        </div>
-        <div data-aos="fade-up" class="border-l-4 border-vx-accent pl-6 py-1">
-            <h3 class="text-xl font-bold mb-1">Cámaras de Alta Tecnología</h3>
-            <p class="text-vx-muted">Dispositivos con captura de audio, visión nocturna y analítica avanzada.</p>
-        </div>
-        <div data-aos="fade-up" class="border-l-4 border-vx-accent pl-6 py-1">
-            <h3 class="text-xl font-bold mb-1">Integración de Seguridad</h3>
-            <p class="text-vx-muted">Arquitecturas centralizadas para supervisión remota en tiempo real.</p>
+    <section class="max-w-4xl mx-auto px-6 pb-20 grid sm:grid-cols-2 gap-6">
+        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100">
+            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">Sistemas CCTV, NVR y DVR</h3>
+            <p class="text-vx-muted text-sm">Grabación y monitoreo continuo de alta definición.</p>
         </div>
 
-        <div class="pt-6">
-            <a href="https://wa.me/59164427367" target="_blank"
-                class="inline-block bg-vx-accent hover:bg-vx-accent/90 text-white font-medium px-6 py-3 rounded-full transition">
-                Consultar sobre este servicio
-            </a>
+        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100">
+            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l20 18M9.5 6.5A2.5 2.5 0 0 1 12 4c1 0 2 .5 2.5 1.5M7 9v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1M17 9V7a2 2 0 0 0-2-2"/></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">Cámaras de Alta Tecnología</h3>
+            <p class="text-vx-muted text-sm">Dispositivos con captura de audio, visión nocturna y analítica avanzada.</p>
+        </div>
+
+        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100 sm:col-span-2">
+            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold mb-1">Integración de Seguridad</h3>
+            <p class="text-vx-muted text-sm">Arquitecturas centralizadas para supervisión remota en tiempo real.</p>
         </div>
     </section>
 
-    <footer class="bg-vx-footer text-gray-300 py-12 px-4 text-center">
+    <section class="bg-vx-footer py-16 px-4 text-center">
+        <h2 class="text-white text-2xl md:text-3xl font-bold mb-4">¿Listo para proteger tu espacio?</h2>
+        <p class="text-gray-300 mb-8 max-w-xl mx-auto">Escríbenos y te ayudamos a diseñar el sistema de seguridad ideal para tu proyecto.</p>
+        <a href="https://wa.me/59164427367" target="_blank"
+            class="inline-block bg-vx-accent hover:bg-vx-accent/90 text-white font-medium px-8 py-3 rounded-full transition">
+            Consultar sobre este servicio
+        </a>
+    </section>
+
+    <footer class="bg-vx-footer border-t border-white/10 text-gray-300 py-10 px-4 text-center">
         <h3 class="text-white text-xl font-bold mb-2">Vectora Networks</h3>
         <p>Ingeniería de redes y seguridad electrónica</p>
         <p class="mt-4 flex items-center justify-center gap-2 flex-wrap"><span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.735 1.55l-.465.355a1 1 0 0 0-.302 1.214 14.11 14.11 0 0 0 6.334 6.449Z"/></svg> 64427367</span><span class="inline-flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-3px"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> vectora.ingenieria@gmail.com</span></p>
         <p class="mt-6 text-sm text-gray-500">&copy; 2026 Vectora Networks. Todos los derechos reservados.</p>
     </footer>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>document.addEventListener('DOMContentLoaded', function () { if (typeof AOS !== 'undefined') AOS.init({ duration: 700, once: true, offset: 80 }); });</script>
+<script>document.addEventListener('DOMContentLoaded', function () { if (typeof AOS !== 'undefined') AOS.init({ duration: 700, once: true, offset: 60 }); });</script>
 </body>
 </html>
