@@ -1,6 +1,6 @@
 /* Estilos personalizados Vectora Networks */
 
-body {
-    overflow-x: clip;
-    max-width: 100%;
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
