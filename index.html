@@ -89,12 +89,21 @@
     </section>
 
     <!-- BANNER -->
-    <section class="bg-vx-footer py-20 px-4">
-        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <section class="relative bg-vx-footer py-20 px-4 overflow-hidden">
+        <svg class="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="circuit" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M0 30h20M40 30h20M30 0v20M30 40v20" stroke="white" stroke-width="1" fill="none"/>
+                    <circle cx="30" cy="30" r="3" fill="white"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit)"/>
+        </svg>
+        <div class="relative max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
             <p class="text-2xl md:text-4xl font-bold leading-snug text-white">
                 Construye tu espacio con visión de futuro.
             </p>
-            <p class="text-gray-300 text-lg mt-6 leading-relaxed">
+            <p class="text-gray-300 leading-relaxed max-w-sm">
                 Si estás iniciando la construcción o remodelación de oficinas, residencias o desarrollos inmobiliarios,
                 estás en el punto exacto para integrar nuestros servicios. Acompañamos tu obra desde sus cimientos
                 para entregar instalaciones de redes y seguridad integradas, estéticas y listas para operar.
