@@ -57,29 +57,57 @@
         </h1>
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 pb-20 grid sm:grid-cols-2 gap-6">
-        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100">
-            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+    <!-- ACORDEON DE SERVICIOS -->
+    <section class="max-w-3xl mx-auto px-6 pb-20 space-y-3">
+        <div data-aos="fade-up" class="border border-gray-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleAccordion('cctv')" class="w-full flex items-center gap-4 p-4 text-left hover:bg-vx-bg-alt transition">
+                <img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CCTV, DVR y NVR" loading="lazy" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <h3 class="font-bold flex-1">CCTV, DVR y NVR</h3>
+                <svg id="chevron-cctv" class="shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6472" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="content-cctv" class="hidden px-5 pb-5 pt-1">
+                <p class="text-vx-muted text-sm mb-4">Dise&#241;amos e instalamos sistemas de videograbaci&#243;n anal&#243;gicos e IP adaptados a la escala de tu inmueble. Integramos c&#225;maras fijas con grabadores DVR (Digital Video Recorder) para instalaciones coaxiales o NVR (Network Video Recorder) para sistemas basados en red IP, garantizando el almacenamiento continuo de video en alta definici&#243;n.</p>
+                <p class="font-semibold text-sm mb-2 text-vx-text">&#191;Por qu&#233; es importante? / Beneficios:</p>
+                <ul class="space-y-2 text-sm text-vx-muted">
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Supervisi&#243;n constante y remota:</strong> Monitorea las instalaciones en tiempo real desde tu smartphone, tablet o computadora, desde cualquier parte del mundo.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Respaldo confiable de evidencia:</strong> Almacenamiento optimizado de grabaciones por d&#237;as o semanas para auditor&#237;as, investigaci&#243;n de incidentes o respaldos legales.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Adaptabilidad y costo-beneficio:</strong> Soluciones flexibles que van desde esquemas an&#225;logos HD econ&#243;micos hasta arquitecturas IP avanzadas y escalables.</span></li>
+                </ul>
             </div>
-            <h3 class="text-lg font-bold mb-1">Sistemas CCTV, NVR y DVR</h3>
-            <p class="text-vx-muted text-sm">Grabación y monitoreo continuo de alta definición, con almacenamiento dimensionado según los días de respaldo que tu proyecto necesite.</p>
         </div>
 
-        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100">
-            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l20 18M9.5 6.5A2.5 2.5 0 0 1 12 4c1 0 2 .5 2.5 1.5M7 9v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1M17 9V7a2 2 0 0 0-2-2"/></svg>
+        <div data-aos="fade-up" class="border border-gray-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleAccordion('ptz')" class="w-full flex items-center gap-4 p-4 text-left hover:bg-vx-bg-alt transition">
+                <img src="https://images.pexels.com/photos/14845202/pexels-photo-14845202.jpeg?auto=compress&cs=tinysrgb&w=400" alt="C&#225;maras de Alta Tecnolog&#237;a y PTZ" loading="lazy" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <h3 class="font-bold flex-1">C&#225;maras de Alta Tecnolog&#237;a y PTZ</h3>
+                <svg id="chevron-ptz" class="shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6472" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="content-ptz" class="hidden px-5 pb-5 pt-1">
+                <p class="text-vx-muted text-sm mb-4">Implementamos c&#225;maras especializadas Pan-Tilt-Zoom (PTZ) con movimiento robotizado de 360&#176;, zoom &#243;ptico de gran alcance y seguimiento autom&#225;tico de objetivos. Adem&#225;s, integramos anal&#237;tica avanzada como t&#233;rmicas, lectura de placas (LPR), visi&#243;n nocturna a color (Full Color / DarkFighter) y detecci&#243;n de intrusos.</p>
+                <p class="font-semibold text-sm mb-2 text-vx-text">&#191;Por qu&#233; es importante? / Beneficios:</p>
+                <ul class="space-y-2 text-sm text-vx-muted">
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Cobertura de amplias zonas:</strong> Una sola c&#225;mara PTZ puede monitorear per&#237;metros grandes, estacionamientos o naves industriales sustituyendo m&#250;ltiples c&#225;maras fijas.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Monitoreo inteligente y proactivo:</strong> Identifica patrones sospechosos, cruce de l&#237;neas no autorizadas o personas en zonas restringidas enviando alertas instant&#225;neas al sistema central.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Detalle impecable a gran distancia:</strong> El zoom &#243;ptico permite identificar rostros o placas vehiculares a decenas de metros sin perder calidad de imagen.</span></li>
+                </ul>
             </div>
-            <h3 class="text-lg font-bold mb-1">Cámaras de Alta Tecnología</h3>
-            <p class="text-vx-muted text-sm">Dispositivos con captura de audio, visión nocturna y analítica avanzada, seleccionados según el nivel de detalle y cobertura que requiere cada punto.</p>
         </div>
 
-        <div data-aos="fade-up" class="bg-vx-bg-alt rounded-xl p-6 border border-gray-100 sm:col-span-2">
-            <div class="w-11 h-11 rounded-lg bg-vx-accent/10 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1FA97A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div data-aos="fade-up" class="border border-gray-100 rounded-xl overflow-hidden bg-white">
+            <button onclick="toggleAccordion('integracion')" class="w-full flex items-center gap-4 p-4 text-left hover:bg-vx-bg-alt transition">
+                <img src="https://images.pexels.com/photos/5581836/pexels-photo-5581836.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Integraci&#243;n de Seguridad" loading="lazy" class="w-16 h-16 rounded-lg object-cover shrink-0">
+                <h3 class="font-bold flex-1">Integraci&#243;n de Seguridad</h3>
+                <svg id="chevron-integracion" class="shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6472" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="content-integracion" class="hidden px-5 pb-5 pt-1">
+                <p class="text-vx-muted text-sm mb-4">Unificamos tus subsistemas de seguridad en una sola plataforma centralizada e inteligente. Conectamos el video de CCTV con sistemas de control de acceso (biom&#233;tricos, tarjetas), alarmas contra robo o incendios y barreras perimetrales para una gesti&#243;n operativa automatizada.</p>
+                <p class="font-semibold text-sm mb-2 text-vx-text">&#191;Por qu&#233; es importante? / Beneficios:</p>
+                <ul class="space-y-2 text-sm text-vx-muted">
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Respuesta autom&#225;tica ante incidentes:</strong> Si una alarma se activa o un acceso no autorizado ocurre, las c&#225;maras apuntan autom&#225;ticamente a la zona del evento para verificar la situaci&#243;n al instante.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Centralizaci&#243;n y control total:</strong> Administra usuarios, permisos, registros de entrada/salida y alertas de seguridad desde una &#250;nica interfaz o centro de monitoreo.</span></li>
+                        <li class="flex gap-2"><span class="text-vx-accent mt-1">&#8226;</span><span><strong class="text-vx-text">Minimizaci&#243;n de errores humanos:</strong> Reduce los tiempos de reacci&#243;n del personal de seguridad mediante automatizaciones y protocolos de respuesta predise&#241;ados.</span></li>
+                </ul>
             </div>
-            <h3 class="text-lg font-bold mb-1">Integración de Seguridad</h3>
-            <p class="text-vx-muted text-sm">Arquitecturas centralizadas para supervisión remota en tiempo real, accesibles desde cualquier lugar a través de tu celular o computadora.</p>
         </div>
     </section>
 
@@ -93,7 +121,7 @@
     </section>
 
     <footer class="bg-vx-footer border-t border-white/10 text-gray-300 pt-14 pb-8 px-4">
-        <div class="max-w-6xl mx-auto grid sm:grid-cols-3 gap-10 text-center sm:text-left">
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-3 gap-6 sm:gap-10 text-center sm:text-left">
             <div>
                 <img src="../assets/img/logo.png" alt="Vectora Networks" class="h-14 object-contain mx-auto sm:mx-0 mb-3">
                 <p class="text-sm text-gray-400 max-w-xs mx-auto sm:mx-0">Ingeniería de redes y seguridad electrónica, con acompañamiento técnico de principio a fin.</p>

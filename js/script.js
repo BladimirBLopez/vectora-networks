@@ -59,3 +59,10 @@ function showTab(tab) {
     document.getElementById('tab-beneficio').className = 'tab-btn pb-4 font-medium border-b-2 border-transparent text-vx-muted';
     document.getElementById('tab-' + tab).className = 'tab-btn pb-4 font-medium border-b-2 border-vx-primary text-vx-text';
 }
+
+function toggleAccordion(id) {
+    const content = document.getElementById('content-' + id);
+    const chevron = document.getElementById('chevron-' + id);
+    content.classList.toggle('hidden');
+    if (chevron) chevron.classList.toggle('rotate-180');
+}
