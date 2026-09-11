@@ -66,3 +66,26 @@ function toggleAccordion(id) {
     content.classList.toggle('hidden');
     if (chevron) chevron.classList.toggle('rotate-180');
 }
+
+function toggleServicioDropdown() {
+    document.getElementById('servicioDropdown').classList.toggle('hidden');
+    document.getElementById('servicioChevron').classList.toggle('rotate-180');
+}
+
+function selectServicio(value) {
+    document.getElementById('servicioLabel').textContent = value;
+    document.getElementById('servicioLabel').classList.remove('text-vx-muted');
+    document.getElementById('servicioLabel').classList.add('text-vx-text');
+    document.getElementById('servicioInput').value = value;
+    document.getElementById('servicioDropdown').classList.add('hidden');
+    document.getElementById('servicioChevron').classList.remove('rotate-180');
+}
+
+document.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('servicioDropdown');
+    const btn = document.getElementById('servicioBtn');
+    if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && e.target !== btn) {
+        dropdown.classList.add('hidden');
+        document.getElementById('servicioChevron').classList.remove('rotate-180');
+    }
+});

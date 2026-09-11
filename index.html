@@ -273,13 +273,19 @@
                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
                 <input type="tel" name="Teléfono" placeholder="Teléfono" required
                     class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
-                <select name="Servicio de interés" required
-                    class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-vx-primary">
-                    <option value="">Servicio de interés</option>
-                    <option value="Infraestructura de Datos y Redes">Infraestructura de Datos y Redes</option>
-                    <option value="Sistemas de Seguridad Electrónica">Sistemas de Seguridad Electrónica</option>
-                    <option value="Ambos">Ambos</option>
-                </select>
+                <div class="relative">
+                    <button type="button" id="servicioBtn" onclick="toggleServicioDropdown()"
+                        class="w-full border border-gray-300 rounded-lg px-4 py-3 flex items-center justify-between text-left bg-white focus:outline-none focus:ring-2 focus:ring-vx-primary">
+                        <span id="servicioLabel" class="text-vx-muted">Servicio de interés</span>
+                        <svg id="servicioChevron" class="shrink-0 transition-transform" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6472" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div id="servicioDropdown" class="hidden absolute z-20 w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-1 overflow-hidden">
+                        <button type="button" onclick="selectServicio('Infraestructura de Datos y Redes')" class="w-full text-left px-4 py-3 hover:bg-vx-bg-alt transition text-sm">Infraestructura de Datos y Redes</button>
+                        <button type="button" onclick="selectServicio('Sistemas de Seguridad Electrónica')" class="w-full text-left px-4 py-3 hover:bg-vx-bg-alt transition text-sm border-t border-gray-100">Sistemas de Seguridad Electrónica</button>
+                        <button type="button" onclick="selectServicio('Ambos')" class="w-full text-left px-4 py-3 hover:bg-vx-bg-alt transition text-sm border-t border-gray-100">Ambos</button>
+                    </div>
+                    <input type="hidden" name="Servicio de interés" id="servicioInput" required>
+                </div>
 
                 <button type="submit"
                     class="w-full bg-vx-primary hover:bg-vx-primary/90 text-white font-medium py-3 rounded-full transition">
