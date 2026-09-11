@@ -43,7 +43,10 @@
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <span class="flex items-center"><img src="assets/img/logo.png" alt="Vectora Networks" class="h-14 md:h-20 object-contain"></span>
 
-            <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-vx-text text-2xl">☰</button>
+            <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-vx-text p-1">
+                <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+                <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
 
             <div id="menu-links" class="hidden md:flex items-center gap-8 text-vx-muted">
                 <a href="#servicios" class="hover:text-vx-text">Servicios</a>
@@ -55,10 +58,24 @@
                 </a>
             </div>
         </div>
-        <div id="menu-mobile" class="hidden md:hidden absolute top-full left-0 w-full flex-col bg-white px-4 pb-4 gap-3 text-vx-muted border-t border-gray-100 shadow-lg">
-            <a href="#servicios" class="block py-2 border-b border-gray-100">Servicios</a>
-            <a href="#nosotros" class="block py-2 border-b border-gray-100">Nosotros</a>
-            <a href="#contacto" class="block py-2">Contacto</a>
+        <div id="menu-backdrop" onclick="toggleMenu()" class="hidden md:hidden fixed inset-0 bg-black/30 z-40"></div>
+        <div id="menu-mobile" class="hidden md:hidden absolute top-full left-0 w-full flex-col bg-white px-4 pb-4 gap-1 text-vx-muted border-t border-gray-100 shadow-lg z-50">
+            <a href="#servicios" onclick="toggleMenu()" class="flex items-center gap-3 py-3 border-b border-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#145DA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Servicios
+            </a>
+            <a href="#nosotros" onclick="toggleMenu()" class="flex items-center gap-3 py-3 border-b border-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#145DA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg>
+                Nosotros
+            </a>
+            <a href="#contacto" onclick="toggleMenu()" class="flex items-center gap-3 py-3 border-b border-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#145DA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Contacto
+            </a>
+            <a href="https://wa.me/59164427367" target="_blank"
+                class="mt-3 bg-vx-primary text-white text-center font-medium py-3 rounded-full">
+                Contáctanos por WhatsApp
+            </a>
         </div>
     </nav>
 

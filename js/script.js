@@ -48,6 +48,14 @@ if (contactForm) {
 function toggleMenu() {
     document.getElementById('menu-mobile').classList.toggle('hidden');
     document.getElementById('menu-mobile').classList.toggle('flex');
+    const backdrop = document.getElementById('menu-backdrop');
+    if (backdrop) backdrop.classList.toggle('hidden');
+    const hamburger = document.getElementById('icon-hamburger');
+    const close = document.getElementById('icon-close');
+    if (hamburger && close) {
+        hamburger.classList.toggle('hidden');
+        close.classList.toggle('hidden');
+    }
 }
 
 function showTab(tab) {
