@@ -92,7 +92,7 @@ function selectServicio(value) {
 document.addEventListener('click', function (e) {
     const dropdown = document.getElementById('servicioDropdown');
     const btn = document.getElementById('servicioBtn');
-    if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && e.target !== btn) {
+    if (dropdown && !dropdown.classList.contains('hidden') && !dropdown.contains(e.target) && !btn.contains(e.target)) {
         dropdown.classList.add('hidden');
         document.getElementById('servicioChevron').classList.remove('rotate-180');
     }
