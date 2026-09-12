@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vectora-networks.vercel.app/sitemap.xml
+Sitemap: https://vectoranetworks.com/sitemap.xml
